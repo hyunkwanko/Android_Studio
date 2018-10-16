@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#2E64FE"
+    >
+
+    <!-- Image -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="38dp"
+        android:layout_toStartOf="@+id/Name"
+        android:layout_toLeftOf="@+id/Name"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!-- Name -->
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="66dp"
+        android:background="#FFF"
+        android:gravity="center"
+        android:text="고현관"
+        android:textSize="25dp" />
+
+
+    <!-- Friends -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="280dp">
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="50dp"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="나의 친구들 전화"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <!-- Time Schedule -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="220dp">
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="50dp"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="나의 수업 시간표"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <!-- Notice Board -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="160dp">
+
+        <Button
+            android:id="@+id/Button3"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="50dp"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="나의 즐거운 게시판"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <!-- Memory -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="100dp">
+
+        <Button
+            android:id="@+id/Button4"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="50dp"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="즐거운 나의 추억들"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <!-- Set -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/Button5"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="50dp"
+            android:background="#BDBDBD"
+            android:gravity="center"
+            android:text="설정"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+</RelativeLayout>
