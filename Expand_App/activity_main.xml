@@ -6,77 +6,78 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="#6f91f2">
-
-    <!-- Image & Name-->
-
+    
+    <!-- Information-->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:paddingHorizontal="20dp">
-
+        
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="아래에 좋아하는 글귀를 입력하세요"
-            android:textSize="20dp"
-            android:gravity="center"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="아래에 좋아하는 글귀를 입력하세요"
+        android:textSize="20dp"
+        android:gravity="center"/>
     </LinearLayout>
-
-    <!-- Friend -->
-
+    
+    <!-- Input -->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:paddingHorizontal="20dp">
-
+        
         <EditText
-            android:id="@+id/edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="여기에 입력하세요."
-            android:textSize="30dp"
-            android:background="#FFF"
-            android:paddingLeft="10dp"/>
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="여기에 입력하세요."
+        android:textSize="30dp"
+        android:background="#FFF"
+        android:paddingLeft="10dp"/>
     </LinearLayout>
-
-    <!-- Schedule -->
-
+    
+    <!-- Button -->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="190dp"
         android:paddingHorizontal="20dp">
-
+        
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="확인 버튼"
-            android:textSize="30dp"
-            android:background="#BDBDBD"
-            android:paddingLeft="10dp"/>
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="확인 버튼"
+        android:textSize="30dp"
+        android:background="#BDBDBD"
+        android:paddingLeft="10dp"/>
     </LinearLayout>
-
-
+    
+    
+    <!-- View -->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
         android:paddingHorizontal="20dp">
-
+        
         <TextView
-            android:id="@+id/textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="70dp"
-            android:hint="..."
-            android:paddingLeft="10dp"/>
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="70dp"
+        android:hint="..."
+        android:paddingLeft="10dp"/>
     </LinearLayout>
-
 </RelativeLayout>
