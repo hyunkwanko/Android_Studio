@@ -6,139 +6,138 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="#e7df95" >
-
+    
     <!-- Textview -->
-
+    
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="10dp">
-
+            
             <TextView
-                android:id="@+id/button1"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="선택을 시작하겠습니까?"
-                android:textSize="25dp" />
+            android:id="@+id/button1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="선택을 시작하겠습니까?"
+            android:textSize="25dp" />
         </TableRow>
-
+        
         <!-- Toggle -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center">
-
+            
             <ToggleButton
-                android:id="@+id/toggleButton"
-                android:layout_weight="1"
-                android:textSize="30dp" />
+            android:id="@+id/toggleButton"
+            android:layout_weight="1"
+            android:textSize="30dp" />
         </TableRow>
     </TableLayout>
-
+    
     <TableLayout
         android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone">
-
+        
         <!-- Textview -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
-
+            
             <TextView
-                android:id="@+id/textView"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="좋아하는 과목은 무엇인가?"
-                android:textSize="25dp" />
-
+            android:id="@+id/textView"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="좋아하는 과목은 무엇인가?"
+            android:textSize="25dp" />
+            
         </TableRow>
-
+        
         <!-- Radio Button -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp" >
-
+            
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
-
+                
                 <RadioButton
-                    android:id="@+id/radio0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="알고리즘"
-                    android:textSize="25dp"/>
-
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알고리즘"
+                android:textSize="25dp"/>
+                
                 <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="객체지향 프로그래밍"
-                    android:textSize="25dp"/>
-
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="객체지향 프로그래밍"
+                android:textSize="25dp"/>
+                
                 <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="안드로이드 프로그래밍"
-                    android:textSize="25dp"/>
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안드로이드 프로그래밍"
+                android:textSize="25dp"/>
             </RadioGroup>
         </TableRow>
-
+        
         <!-- Image -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+            
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_gravity="start"
-                tools:src="@tools:sample/backgrounds/scenic" />
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="start"
+            tools:src="@tools:sample/backgrounds/scenic" />
         </TableRow>
-
+        
         <!-- Finish -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" >
-
+            
             <Button
-                android:id="@+id/buttonEnd"
-                android:text="종료"
-                android:textSize="25dp" />
+            android:id="@+id/buttonEnd"
+            android:text="종료"
+            android:textSize="25dp" />
         </TableRow>
-
+        
         <!-- Back Start -->
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp" >
-
+            
             <Button
-                android:id="@+id/buttonFirst"
-                android:text="처음으로"
-                android:textSize="25dp" />
+            android:id="@+id/buttonFirst"
+            android:text="처음으로"
+            android:textSize="25dp" />
         </TableRow>
     </TableLayout>
-
+    
 </android.support.v7.widget.LinearLayoutCompat>

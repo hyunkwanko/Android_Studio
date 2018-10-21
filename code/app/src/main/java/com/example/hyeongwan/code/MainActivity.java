@@ -7,11 +7,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TableLayout;
-import android.widget.TextView;
 import android.widget.ToggleButton;
 import android.widget.Button;
-import android.widget.RadioGroup;
-
 
 public class MainActivity extends Activity {
     @Override
@@ -19,17 +16,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        final ToggleButton toggle = (ToggleButton) this.findViewById(R.id.toggleButton);
-        final TextView textview= (TextView)findViewById(R.id.textView);
+        final TableLayout table = (TableLayout)findViewById(R.id.table);
+        final ToggleButton toggle = (ToggleButton)findViewById(R.id.toggleButton);
+        final ImageView image = (ImageView)findViewById(R.id.imageView);
         final RadioButton radio0 = (RadioButton)findViewById(R.id.radio0);
         final RadioButton radio1 = (RadioButton)findViewById(R.id.radio1);
         final RadioButton radio2 = (RadioButton)findViewById(R.id.radio2);
-        final RadioGroup radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
-        final TableLayout table = (TableLayout)findViewById(R.id.table);
         final Button buttonFirst = (Button)findViewById(R.id.buttonFirst);
-
-        final ImageView image = (ImageView)findViewById(R.id.imageView);
         final Button buttonEnd = (Button)findViewById(R.id.buttonEnd);
 
         // 설문지 On/Off
@@ -41,16 +34,6 @@ public class MainActivity extends Activity {
                 }else{
                     table.setVisibility(View.INVISIBLE);
                 }
-            }
-        });
-
-        // 재시작
-        buttonFirst.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toggle.setChecked(true);
-                radio0.setChecked(true);
-                recreate();
             }
         });
 
@@ -89,6 +72,19 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        // 재시작
+        buttonFirst.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggle.setChecked(false);
+                radio0.setChecked(false);
+                radio1.setChecked(false);
+                radio2.setChecked(false);
+                table.setVisibility(View.INVISIBLE);
+                image.setVisibility(View.INVISIBLE);
             }
         });
     }
