@@ -8,21 +8,22 @@
 
     <LinearLayout
         android:id="@+id/baseLayout"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="키패드의 메뉴 버튼을 누르세요"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:id="@+id/button1"
+            android:text="배경색 변경"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="버튼 변경"/>
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
