@@ -1,68 +1,146 @@
-package com.example.hyeongwan.code;
+package com.example.hyeongwan.calculator;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.ContextMenu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.graphics.Color;
+import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-    Button button1, button2;
-    LinearLayout baseLayout;
+    Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button0;
+    Button buttonadd,buttondel,buttonmul,buttonsub,buttonresult,buttonclear,buttondot;
+
+    EditText result;
+
+    double a;
+    int ADD = 1;
+    int DEL = 2;
+    int MUL = 3;
+    int SUB = 4;
+    int TYPE;
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("배경색 바꾸기(컨텍스트 메뉴)");
-        baseLayout = (LinearLayout) findViewById(R.id.baseLayout);
-        button1 = (Button) findViewById(R.id.button1);
-        registerForContextMenu(button1);
-        button2 = (Button) findViewById(R.id.button2);
-        registerForContextMenu(button2);
-    }
 
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
-        super.onCreateContextMenu(menu, v, menuInfo);
+        button1 = (Button)findViewById(R.id.button1);
+        button2 = (Button)findViewById(R.id.button2);
+        button3 = (Button)findViewById(R.id.button3);
+        button4 = (Button)findViewById(R.id.button4);
+        button5 = (Button)findViewById(R.id.button5);
+        button6 = (Button)findViewById(R.id.button6);
+        button7 = (Button)findViewById(R.id.button7);
+        button8 = (Button)findViewById(R.id.button8);
+        button9 = (Button)findViewById(R.id.button9);
+        button0 = (Button)findViewById(R.id.button0);
+        buttondot = (Button)findViewById(R.id.buttondot);
+        buttonadd = (Button)findViewById(R.id.buttonadd);
+        buttondel = (Button)findViewById(R.id.buttondel);
+        buttonmul = (Button)findViewById(R.id.buttonmul);
+        buttonsub = (Button)findViewById(R.id.buttonsub);
+        buttonresult = (Button)findViewById(R.id.buttonresult);
+        buttonclear = (Button)findViewById(R.id.buttonclear);
 
-        MenuInflater mInflater = getMenuInflater();
-        if (v == button1) {
-            menu.setHeaderTitle("배경색 변경!!");
-//            menu.setHeaderIcon(R.drawable.icon1);
-            mInflater.inflate(R.menu.menu1, menu);
-        }
-        if (v == button2) {
-            mInflater.inflate(R.menu.menu2, menu);
-        }
-    }
+        result = (EditText)findViewById(R.id.result_view); // Result
 
-    @Override
-    public boolean onContextItemSelected(MenuItem item){
-        switch (item.getItemId()){
-            case R.id.itemRed:
-                baseLayout.setBackgroundColor(Color.RED);
-                return true;
-            case R.id.itemGreen:
-                baseLayout.setBackgroundColor(Color.GREEN);
-                return true;
-            case R.id.itemBlue:
-                baseLayout.setBackgroundColor(Color.BLUE);
-                return true;
-            case R.id.subRotate:
-                button1.setRotation(45);
-                button2.setRotation(45);
-                return true;
-            case R.id.subSize:
-                button1.setScaleX(2);
-                button2.setScaleX(2);
-                return true;
-        }
-        return false;
+        OnClickListener Calculator = new OnClickListener(){
+            public void onClick(View view) {
+                if(view == button1){ // 1
+                    result.setText(result.getText().toString() + 1);
+                }
+                else if(view == button2){ // 2
+                    result.setText(result.getText().toString() + 2);
+                }
+                else if(view == button3){ // 3
+                    result.setText(result.getText().toString() + 3);
+                }
+                else if(view == button4){ // 4
+                    result.setText(result.getText().toString() + 4);
+                }
+                else if(view == button5){ // 5
+                    result.setText(result.getText().toString() + 5);
+                }
+                else if(view == button6){ // 6
+                    result.setText(result.getText().toString() + 6);
+                }
+                else if(view == button7){ // 7
+                    result.setText(result.getText().toString() + 7);
+                }
+                else if(view == button8){ // 8
+                    result.setText(result.getText().toString() + 8);
+                }
+                else if(view == button9){ // 9
+                    result.setText(result.getText().toString() + 9);
+                }
+                else if(view == button0){ // 0
+                    result.setText(result.getText().toString() + 0);
+                }
+                else if(view == buttondot){
+                    result.setText(result.getText().toString() + ".");
+                }
+                else if(view == buttonadd){ // Add
+                    a = Double.parseDouble(result.getText().toString().trim());
+                    result.setText("0");
+                    TYPE = 1;
+                }
+                else if(view == buttondel){ // Del
+                    a = Double.parseDouble(result.getText().toString().trim());
+                    result.setText("0");
+                    TYPE = 2;
+                }
+                else if(view == buttonmul){ // Mul
+                    a = Double.parseDouble(result.getText().toString().trim());
+                    result.setText("0");
+                    TYPE = 3;
+                }
+                else if(view == buttonsub){ //Sub
+                    a = Double.parseDouble(result.getText().toString().trim());
+                    result.setText("0");
+                    TYPE = 4;
+                }
+                else if(view == buttonresult){ // Result
+                    if(TYPE == ADD){ // Cal.Add
+                        a = a + Double.parseDouble(result.getText().toString().trim());
+                        result.setText("" + a);
+                    }
+                    else if(TYPE == DEL){ // Cal.Del
+                        a = a - Double.parseDouble(result.getText().toString().trim());
+                        result.setText("" + a);
+                    }
+                    else if(TYPE == MUL){ // Cal.Mul
+                        a = a * Double.parseDouble(result.getText().toString().trim());
+                        result.setText("" + a);
+                    }
+                    else if(TYPE == SUB){ // Cal.Sub
+                        a = a / Double.parseDouble(result.getText().toString().trim());
+                        result.setText("" + a);
+                    }
+                }
+                else if(view == buttonclear){ // clear
+                    result.setText("");
+                }
+            }
+        };
+
+        button1.setOnClickListener(Calculator);
+        button2.setOnClickListener(Calculator);
+        button3.setOnClickListener(Calculator);
+        button4.setOnClickListener(Calculator);
+        button5.setOnClickListener(Calculator);
+        button6.setOnClickListener(Calculator);
+        button7.setOnClickListener(Calculator);
+        button8.setOnClickListener(Calculator);
+        button9.setOnClickListener(Calculator);
+        button0.setOnClickListener(Calculator);
+        buttondot.setOnClickListener(Calculator);
+        buttonadd.setOnClickListener(Calculator);
+        buttondel.setOnClickListener(Calculator);
+        buttonmul.setOnClickListener(Calculator);
+        buttonsub.setOnClickListener(Calculator);
+        buttonresult.setOnClickListener(Calculator);
+        buttonclear.setOnClickListener(Calculator);
     }
 }
