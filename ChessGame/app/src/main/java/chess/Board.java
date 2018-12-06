@@ -32,7 +32,6 @@ public class Board {
     }
 
     public Board() {
-        // TODO Auto-generated constructor stub
         this.space = new Space[9][9];
         this.lastUpdatedStart = new Coordinate(-1, -1);
         this.lastUpdatedEnd = new Coordinate(-1, -1);

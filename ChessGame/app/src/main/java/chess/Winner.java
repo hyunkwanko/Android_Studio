@@ -95,13 +95,6 @@ public class Winner {
 		return checkmate;
 	}
 
-	public static void printMoves(ArrayList<Coordinate> moves, String mess) {
-		System.out.println(mess);
-		for (int i = 0; i < moves.size(); i++) {
-			System.out.println(moves.get(i).row + "," + moves.get(i).col);
-		}
-	}
-
 	private static ArrayList<Coordinate> mergeLists(ArrayList<Coordinate> moves, ArrayList<Coordinate> pieceMoves) {
 		ArrayList<Coordinate> newmoves = new ArrayList<Coordinate>();
 		newmoves.addAll(moves);
