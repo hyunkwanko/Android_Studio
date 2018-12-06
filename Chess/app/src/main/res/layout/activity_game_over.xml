@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <TextView
             android:id="@+id/winnerText"
@@ -23,40 +24,12 @@
             android:text="흰색 승리"
             android:textSize="50dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <Button
+            android:id="@+id/homeB"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/gameName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".2"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="제목을 입력하세요."
-                android:inputType="textPersonName"
-                android:textSize="25dp" />
-
-            <Button
-                android:id="@+id/saveB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".1"
-                android:text="저장하기" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"></Space>
-
-            <Button
-                android:id="@+id/homeB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".1"
-                android:text="홈" />
-        </LinearLayout>
+            android:text="홈"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </RelativeLayout>

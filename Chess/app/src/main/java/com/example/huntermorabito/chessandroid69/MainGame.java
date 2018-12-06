@@ -3,8 +3,6 @@ package com.example.huntermorabito.chessandroid69;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,11 +17,10 @@ import pieces.*;
 public class MainGame extends AppCompatActivity {
 
     public final static String EXTRA_WINNER = "EXTRA_WINNER";
-    public final static String EXTRA_RECORDED = "EXTRA_RECORDED";
 
     String firstTag;
     String secondTag;
-    boolean isWhiteTurn, undoTriggered, drawOffered, clickEvent;
+    boolean isWhiteTurn, undoTriggered, drawOffered;
 
     Board board;
     ArrayList<Move> moves;
@@ -42,8 +39,6 @@ public class MainGame extends AppCompatActivity {
         isWhiteTurn = true;
         undoTriggered = false;
         drawOffered = false;
-
-
 
         board = new Board();
         board.init();
@@ -174,9 +169,7 @@ public class MainGame extends AppCompatActivity {
     }
 
     public void gameOver(String winner){
-        RecordedGame thisGame = new RecordedGame("", winner, moves);
         Intent intent = new Intent(this, GameOver.class);
-        intent.putExtra(EXTRA_RECORDED, thisGame);
         intent.putExtra(EXTRA_WINNER, winner);
         startActivity(intent);
     }
@@ -219,7 +212,6 @@ public class MainGame extends AppCompatActivity {
         int rank = 8;
 
         for (int row = 0; row < 8; row++) {
-
             for (int col = 0; col < 8; col++) {
                 String currentTag = (String) (Character.toString(file) + Integer.toString(rank));
                 int viewID = getResources().getIdentifier(currentTag, "id", getPackageName());
@@ -259,45 +251,4 @@ public class MainGame extends AppCompatActivity {
             file = 'a';
         }
     }
-
-    View.OnTouchListener spaceListener = new View.OnTouchListener() {
-        @Override
-        public boolean onTouch(View view, MotionEvent motionEvent) {
-            switch (motionEvent.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-
-                    Log.d("Touch", "touched down");
-                    Log.d("Touch", view.getTag().toString());
-
-                    if(clickEvent) {
-                        Log.d("Touch", "successful click");
-                        secondSpace = (ImageView)view;
-                        tryMove();
-                    }else{
-                        Log.d("Touch", "first Set");
-                        firstSpace = (ImageView)view;
-                    }
-                    break;
-
-                case MotionEvent.ACTION_UP:
-
-                    Log.d("Touch", "touched up");
-                    Log.d("Touch", view.getTag().toString());
-
-                    if(firstSpace == view){
-                        Log.d("Touch", "is click Event");
-                        clickEvent = true;
-                    }else if(clickEvent){
-                        Log.d("Touch", "end click event");
-                        clickEvent = false;
-                    }else{
-                        Log.d("Touch", "successful drag");
-                        secondSpace = (ImageView)view;
-                        tryMove();
-                    }
-                    break;
-            }
-            return false;
-        }
-    };
 }

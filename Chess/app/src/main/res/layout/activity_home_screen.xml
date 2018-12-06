@@ -8,32 +8,29 @@
     tools:context="com.example.huntermorabito.chessandroid69.HomeScreen">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <TextView
-            android:text="체스\n201312097 고현관"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/textView"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:textSize="30dp"
-            android:textColor="#000000"/>
-        <Button
-            android:id="@+id/playB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="게임 시작"/>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="체스\n201312097 고현관"
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
         <Button
-            android:id="@+id/recordedGamesB"
-            android:layout_width="match_parent"
+            android:id="@+id/playB"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="게임 시작"
             android:textSize="30dp"
-            android:text="저장된 게임 불러오기" />
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </RelativeLayout>
