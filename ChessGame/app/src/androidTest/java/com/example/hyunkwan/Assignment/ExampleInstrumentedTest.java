@@ -1,4 +1,4 @@
-package com.example.hyunkwan.ChessGame;
+package com.example.hyunkwan.Assignment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

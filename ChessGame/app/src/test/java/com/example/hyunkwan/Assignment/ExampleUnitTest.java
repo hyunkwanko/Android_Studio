@@ -1,4 +1,4 @@
-package com.example.hyunkwan.ChessGame;
+package com.example.hyunkwan.Assignment;
 
 import org.junit.Test;
 
