@@ -12,7 +12,7 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page);
+        setContentView(R.layout.main_page);
 
         final Intent introduce = new Intent(this, Introduction.class);
         btn1 = (Button) findViewById(R.id.btn1);
