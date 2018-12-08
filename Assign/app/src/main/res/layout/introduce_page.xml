@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*학과 소개\n\n 국립 부경대학교(총장 김영섭)는 지난 1996년 부산수산대학교(1941년 한국 최초의 수산고등교육기관으로 설립)와 부산공업대학교(1924년 한국 최초의 근대식 공업기술 교육기관으로 설립)가 종합국립대 최초로 통합에 성공해 탄생한 깊은 전통을 가진 부산 최초의 대학이다."
+            android:textSize="30dp"/>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="돌아가기"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+</RelativeLayout>
