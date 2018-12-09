@@ -2,6 +2,7 @@ package com.example.hyunkwan.Assignment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     Button btn_Update;
     Button btn_Insert;
     Button btn_Select;
+    Button btn_Back;
     EditText edit_ID;
     EditText edit_Name;
     EditText edit_Age;
@@ -93,6 +95,16 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         btn_Insert.setEnabled(true);
         btn_Update.setEnabled(false);
+
+        final Intent homeScreen =  new Intent(this, HomeScreen.class);
+        btn_Back = (Button)findViewById(R.id.btn_back);
+        btn_Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(homeScreen);
+            }
+        });
+
     }
 
     public void setInsertMode(){

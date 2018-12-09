@@ -247,6 +247,15 @@
                 android:text="Update"
                 android:background="#AFEEEE"
                 android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="돌아가기"
+                android:background="#AFEEEE"
+                android:layout_weight="1"
                 />
         </LinearLayout>
 
@@ -262,6 +271,6 @@
                 android:layout_height="match_parent">
             </ListView>
         </ScrollView>
-        
+
     </LinearLayout>
 </RelativeLayout>
