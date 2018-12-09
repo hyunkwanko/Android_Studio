@@ -3,7 +3,6 @@ package com.example.hyunkwan.Assignment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,9 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "Main";
 
     Button btn_Update;
@@ -138,13 +136,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             nowIndex = Long.parseLong(arrayIndex.get(position));
             String[] nowData = arrayData.get(position).split("\\s+");
             String viewData = nowData[0] + ", " + nowData[1] + ", " + nowData[2] + ", " + nowData[3];
-            AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+            AlertDialog.Builder dialog = new AlertDialog.Builder(SignUp.this);
             dialog.setTitle("데이터 삭제")
                     .setMessage("해당 데이터를 삭제 하시겠습니까?" + "\n" + viewData)
                     .setPositiveButton("네", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this, "데이터를 삭제했습니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "데이터를 삭제했습니다.", Toast.LENGTH_SHORT).show();
                             mDbOpenHelper.deleteColumn(nowIndex);
                             showDatabase(sort);
                             setInsertMode();
@@ -153,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this, "삭제를 취소했습니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "삭제를 취소했습니다.", Toast.LENGTH_SHORT).show();
                             setInsertMode();
                         }
                     })
