@@ -1,6 +1,7 @@
 package com.example.hyunkwan.Assignment;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,24 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(Introduce);
+            }
+        });
+
+        btn2 = (Button) findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cms.pknu.ac.kr/itcae/view.do?no=9576"));
+                startActivity(intent);
+            }
+        });
+
+        final Intent schedule = new Intent(this, Schedule.class);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(schedule);
             }
         });
 
