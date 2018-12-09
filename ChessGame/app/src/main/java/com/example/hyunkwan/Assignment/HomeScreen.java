@@ -32,7 +32,7 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        final Intent Signup = new Intent(this, SignUp.class);
+        final Intent Signup = new Intent(this, MainActivity.class);
         btn5 = (Button) findViewById(R.id.btn5);
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
