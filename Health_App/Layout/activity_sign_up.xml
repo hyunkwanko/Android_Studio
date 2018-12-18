@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunkwan.Assignment.SignUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름: "
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:inputType="textPersonName"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="키(소수 첫째자리까지): "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="몸무게: "
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:id="@+id/edit_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="10"
+                android:inputType="textPersonName"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GENDER: "
+                android:textSize="15dp"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Man"
+                android:textSize="15dp"
+                android:id="@+id/check_man"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Woman"
+                android:textSize="15dp"
+                android:id="@+id/check_woman"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by "
+                android:textSize="15dp"
+                />
+
+            <CheckBox
+                android:id="@+id/check_userid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textSize="15dp"
+                />
+
+
+            <CheckBox
+                android:id="@+id/check_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="15dp"
+                />
+
+            <CheckBox
+                android:id="@+id/check_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AFEEEE"
+                android:text="View"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/btn_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AFEEEE"
+                android:text="Insert"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:background="#AFEEEE"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="돌아가기"
+                android:background="#AFEEEE"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="368dp"
+            android:layout_height="495dp"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true">
+            <ListView
+                android:id="@+id/db_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunkwan.Assignment.HomeScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인정보 입력"
+            android:textSize="25dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI 계산"
+            android:textSize="25dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="트레이너 연락처"
+            android:textSize="25dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="런닝 음악"
+            android:textSize="25dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="운동 코스"
+            android:textSize="25dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="1in"
+            android:layout_weight="5"
+            android:src="@drawable/train"
+            android:scaleType="fitXY"
+            />
+    </LinearLayout>
+</RelativeLayout>
