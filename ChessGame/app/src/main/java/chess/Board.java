@@ -5,15 +5,15 @@ import pieces.*;
 
 public class Board {
 
-    public Space[][] space;// = new Space[9][9];
-    public Coordinate lastUpdatedStart;// = new Coordinate(-1,-1);
-    public Coordinate lastUpdatedEnd;// = new Coordinate(-1,-1);
+    public Space[][] space;
+    public Coordinate lastUpdatedStart;
+    public Coordinate lastUpdatedEnd;
     public Piece lastPieceStart;
     public Piece lastPieceEnd;
-    public ArrayList<Coordinate> whiteKingThreat;// = new ArrayList<Coordinate>();
-    public ArrayList<Coordinate> blackKingThreat;// = new ArrayList<Coordinate>();
-    public Coordinate whiteKing;//= new Coordinate(7,4);
-    public Coordinate blackKing;// = new Coordinate(0,4);
+    public ArrayList<Coordinate> whiteKingThreat;
+    public ArrayList<Coordinate> blackKingThreat;
+    public Coordinate whiteKing;
+    public Coordinate blackKing;
     public Coordinate lastWhiteKing;
     public Coordinate lastBlackKing;
 

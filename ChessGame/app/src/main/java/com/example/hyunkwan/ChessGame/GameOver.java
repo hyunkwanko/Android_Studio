@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class GameOver extends AppCompatActivity {
-    TextView winnerText;
-    Button homeB;
+    TextView view;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,11 @@ public class GameOver extends AppCompatActivity {
         Intent mainGame = getIntent();
         final String winner = mainGame.getStringExtra(MainGame.EXTRA_WINNER);
 
-        winnerText = (TextView)findViewById(R.id.winnerText);
-        winnerText.setText(winner);
+        view = (TextView)findViewById(R.id.view);
+        view.setText(winner);
 
-        homeB = (Button)findViewById(R.id.homeB);
-        homeB.setOnClickListener(new View.OnClickListener() {
+        back = (Button)findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(homeScreen);
