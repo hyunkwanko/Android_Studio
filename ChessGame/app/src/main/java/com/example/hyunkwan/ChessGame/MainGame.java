@@ -26,7 +26,7 @@ public class MainGame extends AppCompatActivity {
     ArrayList<Move> moves;
 
     TextView turnText, messageText;
-    Button undoB, aiB, drawB, resignB;
+    Button undo, ai, draw, resign;
     ImageView firstSpace, secondSpace;
 
     @Override
@@ -49,31 +49,31 @@ public class MainGame extends AppCompatActivity {
         turnText.setText("흰색 차례");
         messageText.setText("");
 
-        undoB = (Button) findViewById(R.id.undoB);
-        undoB.setOnClickListener(new View.OnClickListener() {
+        undo = (Button) findViewById(R.id.undo);
+        undo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 undoClicked();
             }
         });
 
-        aiB = (Button) findViewById(R.id.aiB);
-        aiB.setOnClickListener(new View.OnClickListener() {
+        ai = (Button) findViewById(R.id.ai);
+        ai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 aiClicked();
             }
         });
 
-        drawB = (Button) findViewById(R.id.drawB);
-        drawB.setOnClickListener(new View.OnClickListener() {
+        draw = (Button) findViewById(R.id.draw);
+        draw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 drawClicked();
             }
         });
-        resignB = (Button) findViewById(R.id.resignB);
-        resignB.setOnClickListener(new View.OnClickListener() {
+        resign = (Button) findViewById(R.id.resign);
+        resign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 resignClicked();
